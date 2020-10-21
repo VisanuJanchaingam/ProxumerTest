@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".proxumer.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:paddingLeft="8dp"
+            android:id="@+id/recyclerviewGoals"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/color_yellow"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingTop="16dp"
+            android:id="@+id/totalGoalSection"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="@color/color_yellow"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerviewGoals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:translationY="3dp"
+                android:id="@+id/tvNumberOfGoal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvAllSaving"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="3 Goals" />
+
+            <TextView
+                android:layout_marginRight="10dp"
+                android:id="@+id/tvAllSaving"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="right|bottom"
+                android:text="All Saving"
+                android:textColor="@color/color_white"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvTotalValue"
+                />
+
+
+            <TextView
+                android:translationY="4dp"
+                android:gravity="bottom"
+                android:id="@+id/tvTotalValue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:text="37,500"
+                android:textColor="@color/color_white"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/labelTHB"
+                />
+
+            <TextView
+                android:id="@+id/labelTHB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_thb"
+                android:textColor="@color/color_white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnNewGoal"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_margin="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#ca5d48"
+            app:layout_constraintTop_toBottomOf="@+id/totalGoalSection"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:clickable="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    app:layout_constraintHorizontal_bias="0.40"
+                    android:id="@+id/imgAdd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:src="@mipmap/ic_launcher"
+                    android:backgroundTint="@color/color_white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp">
+                </ImageView>
+
+                <TextView
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="New Goal"
+                    android:textColor="@color/color_white"
+                    android:textSize="18dp"
+                    app:layout_constraintHorizontal_bias="0.05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imgAdd"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="26dp"
+        android:gravity="left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNewGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Best Offer"
+        android:textColor="#434343"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/tvBestOffer"
+        />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:background="@color/colorAccent"
+            android:layout_marginTop="10dp"
+            android:id="@+id/recyclerviewBestOffer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvBestOffer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="26dp"
+            android:gravity="left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerviewBestOffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suggest for you"
+            android:textColor="#434343"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:id="@+id/tvSuggestion"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:paddingBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="8dp"
+            android:id="@+id/recyclerviewSuggestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvSuggestion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
+</layout>

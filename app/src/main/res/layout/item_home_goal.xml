@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:cardCornerRadius="8dp"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:id="@+id/item"
+    android:layout_marginTop="16dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/green_round_cardview"
+    >
+
+
+
+            <ImageView
+                android:id="@+id/icon"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:id="@+id/tvRedNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|right"
+        android:text="16,500 THB"
+        android:textColor="@color/color_orange"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBlackNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|right"
+        android:text="20,000 THB"
+        android:textColor="#595f6f"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintTop_toBottomOf="@+id/tvRedNumber"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        />
+
+    <com.example.newbaseandroid.proxumer.HorizontalChartView
+        android:id="@+id/barChart"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvBlackNumber"
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+
+    </com.example.newbaseandroid.proxumer.HorizontalChartView>
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:id="@+id/tvAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:text="ไปเที่ยวญี่ปุ่น"
+        android:textColor="@color/color_dark_grey"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/barChart"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        />
+
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:text="Good"
+        android:textColor="@color/color_dark_green"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        />
+
+
+    <TextView
+        android:id="@+id/tvDayLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center|right"
+        android:text="45 days left"
+        android:textColor="@color/color_dark_grey"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Proxumer</string>
+
+    <string name="label_bath">THB</string>
+    <string name="label_amount">Amount</string>
+    <string name="label_select_date">Select Date</string>
+    <string name="label_select_account">Select Account</string>
+    <string name="label_what_is_your_goal">What is your Goal</string>
+    <string name="label_thb">THB</string>
+</resources>
